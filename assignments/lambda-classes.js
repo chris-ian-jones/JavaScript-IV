@@ -34,9 +34,9 @@ class Student extends Person {
     listsSubjects() {
         console.log(`${this.favSubjects.join(' ')}`);
     }
-    // PRAssignment() {
-    //     console.log(`${} has submitted a PR for ${}`);
-    // }
+    PRAssignment(subject) {
+        console.log(`${this.name} has submitted a PR for ${subject}`);
+    }
     // sprintChallenge() {
     //     console.log(`${} has begun sprint challenge on ${}`);
     // }
@@ -80,3 +80,4 @@ const fred = new Instructor({
 fred.demo('ja');
 fred.grade(chris, 'SUBJECT STRING');
 chris.listsSubjects();
+chris.PRAssignment('J-IV');
