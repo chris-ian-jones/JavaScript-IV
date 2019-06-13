@@ -9,16 +9,6 @@ class Person {
     }
 }
 
-/*Test Person
-const fred = new Person({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-});
-
-fred.speak();
-*/
-
 class Instructor extends Person {
     constructor(props) {
         super(props);
@@ -26,12 +16,12 @@ class Instructor extends Person {
         this.favLanguage = props.favLanguage;
         this.catchPhrase = props.catchPhrase;
     }
-    demo() {
-        console.log(`Today we are learning about ${}`);
+    demo(subject) {
+        console.log(`Today we are learning about ${subject}`);
     }
-    grade() {
-        console.log(`${} receives a perfect score on ${}`);
-    }
+    // grade() {
+    //     console.log(`${} receives a perfect score on ${}`);
+    // }
 }
 
 class Student extends Person {
@@ -41,15 +31,15 @@ class Student extends Person {
         this.className = props.className;
         this.favSubjects = props.favSubjects;
     }
-    listsSubjects() {
-        console.log(`${}`)
-    }
-    PRAssignment() {
-        console.log(`${} has submitted a PR for ${}`);
-    }
-    sprintChallenge() {
-        console.log(`${} has begun sprint challenge on ${}`);
-    }
+    // listsSubjects() {
+    //     console.log(`${}`)
+    // }
+    // PRAssignment() {
+    //     console.log(`${} has submitted a PR for ${}`);
+    // }
+    // sprintChallenge() {
+    //     console.log(`${} has begun sprint challenge on ${}`);
+    // }
 }
 
 class ProjectManager extends Instructor {
@@ -58,10 +48,24 @@ class ProjectManager extends Instructor {
         this.gradClassName = props.gradClassName;
         this.favInstructor = props.favInstructor;
     }
-    standup() {
-        console.log(`${} announces to ${}, @channel standy times!​​​​​`)
-    }
-    debugsCode() {
-        console.log(`${} debugs ${}'s code on ${}`)
-    }
+    // standup() {
+    //     console.log(`${} announces to ${}, @channel standy times!​​​​​`)
+    // }
+    // debugsCode() {
+    //     console.log(`${} debugs ${}'s code on ${}`)
+    // }
 }
+
+
+//Test Instructor
+const fred = new Instructor({
+    name: 'Fred',
+    location: 'Bedrock',
+    age: 37,
+    previousBackground: 'PREVIOUSBACKGROUND',
+    className: 'CLASSNAME',
+    favSubjects: 'FAVSUBJECTS',
+    catchPhrase: 'CATHPHRASE'
+});
+
+fred.demo('ja');
