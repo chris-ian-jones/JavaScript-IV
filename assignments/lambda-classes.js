@@ -9,7 +9,7 @@ class Person {
     }
 }
 
-// Test Person
+/*Test Person
 const fred = new Person({
     name: 'Fred',
     location: 'Bedrock',
@@ -17,3 +17,21 @@ const fred = new Person({
 });
 
 fred.speak();
+*/
+
+class Instructor extends Person {
+    constructor(props) {
+        super(props);
+        this.speciality = props.speciality;
+        this.favLanguage = props.favLanguage;
+        this.catchPhrase = props.catchPhrase;
+    }
+    demo() {
+        console.log(`Today we are learning about ${}`);
+    }
+    grade() {
+        console.log(`${} receives a perfect score on ${}`);
+    }
+}
+
+
