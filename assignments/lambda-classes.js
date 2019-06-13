@@ -192,7 +192,6 @@ isaiah.PRAssignment('Preprocessing-I');
 kevin.PRAssignment('portfolio-website');
 theo.PRAssignment('responsive-web-design-I');
 
-
 isaiah.sprintChallenge('Sprint-Challenge--User-Interface');
 kevin.sprintChallenge('Sprint-Challenge--Advanced-CSS');
 theo.sprintChallenge('Sprint-Challenge--Javascript');
