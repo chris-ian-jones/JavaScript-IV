@@ -48,6 +48,13 @@ class Student extends Person {
     sprintChallenge(subject) {
         console.log(`${this.name} has begun sprint challenge on ${subject}`);
     };
+    graduate() {
+        if (this.grade > 70) {
+            console.log(`${this.name} is ready to graduate! Their grade is ${this.grade}%`);
+        } else {
+            console.log(`${this.name}'s grade is still under 70%, continue grading their assignments to increase their score`);
+        };
+    };
 };
 
 class ProjectManager extends Instructor {
@@ -160,19 +167,6 @@ const marguel = new ProjectManager({
     catchPhrase: "Practice Flex Zombies !!!"
 });
 
-// Instructor Test for second stretch problem
-console.log(isaiah.grade);
-dan.calculateNewStudentGrade(isaiah);
-console.log(isaiah.grade);
-
-// Project Manager Test for second stretch problem
-console.log(theo.grade);
-mary.calculateNewStudentGrade(theo);
-console.log(theo.grade);
-
-
-
-
 // // * Method Tests * //
 
 // // Person
@@ -211,3 +205,20 @@ console.log(theo.grade);
 // mary.debugsCode(isaiah, 'JavaScript-I');
 // austin.debugsCode(kevin, 'Sprint-Challenge--Advanced-CSS');
 // marguel.debugsCode(theo, 'Preprocessing-II');
+
+// // * Stretch Method Tests * //
+
+// Instructor Test for second stretch problem
+// console.log(isaiah.grade);
+// dan.calculateNewStudentGrade(isaiah);
+// console.log(isaiah.grade);
+
+// Project Manager Test for second stretch problem
+// console.log(theo.grade);
+// mary.calculateNewStudentGrade(theo);
+// console.log(theo.grade);
+console.log(theo.grade);
+theo.graduate();
+mary.calculateNewStudentGrade(theo);
+console.log(theo.grade);
+theo.graduate();
