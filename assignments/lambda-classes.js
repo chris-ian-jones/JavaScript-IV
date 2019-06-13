@@ -22,6 +22,13 @@ class Instructor extends Person {
     grade(student, subject) {
         console.log(`${student.name} receives a perfect score on ${subject}`);
     };
+    calculateNewStudentGrade(student){
+        const randomPoints = (min, max) => {
+            return Math.random() * (max - min) + min;
+         };
+        // let randomPoints = Math.random
+        return student.grade += Math.ceil(randomPoints(-15, 15));
+    }
 };
 
 class Student extends Person {
@@ -30,6 +37,7 @@ class Student extends Person {
         this.previousBackground = props.previousBackground;
         this.className = props.className;
         this.favSubjects = props.favSubjects;
+        this.grade = props.grade;
     };
     listsSubjects() {
         console.log(`${this.favSubjects.join(' ')}`);
@@ -64,7 +72,8 @@ const isaiah = new Student({
     location: 'Florida',
     previousBackground: 'High School last month',
     className: 'Web21',
-    favSubjects: ['Html', 'CSS', 'JavaScript']
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
+    grade: 85
 });
 
 const kevin = new Student({
@@ -73,7 +82,8 @@ const kevin = new Student({
     location: "California",
     previousBackground: "Table Games Dealer",
     className: "WEB21",
-    favSubjects: ['Html', 'JavaScript']
+    favSubjects: ['Html', 'JavaScript'],
+    grade: 75
 });
 
 const theo = new Student({
@@ -82,7 +92,8 @@ const theo = new Student({
     location: "Louisiana",
     previousBackground: "Comedian",
     className: "WEB21",
-    favSubjects: ['Python', 'Go', 'JavaScript']
+    favSubjects: ['Python', 'Go', 'JavaScript'],
+    grade: 65
 });
 
 // Instructors
@@ -149,41 +160,54 @@ const marguel = new ProjectManager({
     catchPhrase: "Practice Flex Zombies !!!"
 });
 
-// * Method Tests * //
+// Instructor Test for second stretch problem
+console.log(isaiah.grade);
+dan.calculateNewStudentGrade(isaiah);
+console.log(isaiah.grade);
 
-// Person
-isaiah.speak();
-dan.speak();
-mary.speak();
-
-// Instructor
-dan.demo('User-Interface');
-nisa.demo('UI-III-Flexbox');
-joe.demo('Git-Flow-Practice');
-
-dan.grade(isaiah, 'JavaScript-I');
-nisa.grade(kevin, 'Sprint-Challenge--Advanced-CSS');
-joe.grade(theo, 'Preprocessing-II');
-
-// Student
-isaiah.listsSubjects();
-kevin.listsSubjects();
-theo.listsSubjects();
-
-isaiah.PRAssignment('Preprocessing-I');
-kevin.PRAssignment('portfolio-website');
-theo.PRAssignment('responsive-web-design-I');
+// Project Manager Test for second stretch problem
+console.log(theo.grade);
+mary.calculateNewStudentGrade(theo);
+console.log(theo.grade);
 
 
-isaiah.sprintChallenge('Sprint-Challenge--User-Interface');
-kevin.sprintChallenge('Sprint-Challenge--Advanced-CSS');
-theo.sprintChallenge('Sprint-Challenge--Javascript');
 
-// Project Manager
-mary.standup('#Web21Mary');
-austin.standup('#Web21Austin');
-marguel.standup('#Web21Marguel');
 
-mary.debugsCode(isaiah, 'JavaScript-I');
-austin.debugsCode(kevin, 'Sprint-Challenge--Advanced-CSS');
-marguel.debugsCode(theo, 'Preprocessing-II');
+// // * Method Tests * //
+
+// // Person
+// isaiah.speak();
+// dan.speak();
+// mary.speak();
+
+// // Instructor
+// dan.demo('User-Interface');
+// nisa.demo('UI-III-Flexbox');
+// joe.demo('Git-Flow-Practice');
+
+// dan.grade(isaiah, 'JavaScript-I');
+// nisa.grade(kevin, 'Sprint-Challenge--Advanced-CSS');
+// joe.grade(theo, 'Preprocessing-II');
+
+// // Student
+// isaiah.listsSubjects();
+// kevin.listsSubjects();
+// theo.listsSubjects();
+
+// isaiah.PRAssignment('Preprocessing-I');
+// kevin.PRAssignment('portfolio-website');
+// theo.PRAssignment('responsive-web-design-I');
+
+
+// isaiah.sprintChallenge('Sprint-Challenge--User-Interface');
+// kevin.sprintChallenge('Sprint-Challenge--Advanced-CSS');
+// theo.sprintChallenge('Sprint-Challenge--Javascript');
+
+// // Project Manager
+// mary.standup('#Web21Mary');
+// austin.standup('#Web21Austin');
+// marguel.standup('#Web21Marguel');
+
+// mary.debugsCode(isaiah, 'JavaScript-I');
+// austin.debugsCode(kevin, 'Sprint-Challenge--Advanced-CSS');
+// marguel.debugsCode(theo, 'Preprocessing-II');
