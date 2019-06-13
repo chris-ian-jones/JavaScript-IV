@@ -48,9 +48,9 @@ class ProjectManager extends Instructor {
         this.gradClassName = props.gradClassName;
         this.favInstructor = props.favInstructor;
     }
-    // standup() {
-    //     console.log(`${} announces to ${}, @channel standy times!​​​​​`)
-    // }
+    standup(slackChannel) {
+        console.log(`${this.name} announces to ${slackChannel}, @channel standy times!​​​​​`)
+    }
     // debugsCode() {
     //     console.log(`${} debugs ${}'s code on ${}`)
     // }
@@ -66,7 +66,6 @@ const chris = new Student({
     favSubjects: ['FAVSUBJECTS1', 'FAVSUBJECT2', 'FAVSUBJECTS']
 })
 
-
 //Test Instructor
 const fred = new Instructor({
     name: 'Fred',
@@ -77,8 +76,21 @@ const fred = new Instructor({
     catchPhrase: 'CATCHPHRASE'
 });
 
+const mary = new ProjectManager({
+    name: 'Mary',
+    location: 'PMLOCATION',
+    age: 37,
+    specialty: 'SPECIALITY',
+    favLanguage: 'FAVLANGUAGE',
+    catchPhrase: 'CATCHPHRASE',
+    gradClassName: 'GRADCLASSNAME',
+    favInstructor: 'FAVINSTRUCTOR'
+})
+
+
 fred.demo('ja');
 fred.grade(chris, 'SUBJECT STRING');
 chris.listsSubjects();
 chris.PRAssignment('J-IV');
 chris.sprintChallenge('J-VII');
+mary.standup('#help')
