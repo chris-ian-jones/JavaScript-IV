@@ -19,9 +19,9 @@ class Instructor extends Person {
     demo(subject) {
         console.log(`Today we are learning about ${subject}`);
     }
-    // grade() {
-    //     console.log(`${} receives a perfect score on ${}`);
-    // }
+    grade(student, subject) {
+        console.log(`${student.name} receives a perfect score on ${subject}`);
+    }
 }
 
 class Student extends Person {
@@ -56,16 +56,26 @@ class ProjectManager extends Instructor {
     // }
 }
 
+//Test Student
+const chris = new Student({
+    name: 'Chris',
+    location: 'Oxford',
+    age: 33,
+    previousBackground: 'PREVIOUSBACKGROUND',
+    className: 'CLASSNAME',
+    favSubjects: 'FAVSUBJECTS',
+})
+
 
 //Test Instructor
 const fred = new Instructor({
     name: 'Fred',
     location: 'Bedrock',
     age: 37,
-    previousBackground: 'PREVIOUSBACKGROUND',
-    className: 'CLASSNAME',
-    favSubjects: 'FAVSUBJECTS',
-    catchPhrase: 'CATHPHRASE'
+    specialty: 'SPECIALITY',
+    favLanguage: 'FAVLANGUAGE',
+    catchPhrase: 'CATCHPHRASE'
 });
 
 fred.demo('ja');
+fred.grade(chris, 'SUBJECT STRING');
