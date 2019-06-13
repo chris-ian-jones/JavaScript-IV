@@ -31,9 +31,9 @@ class Student extends Person {
         this.className = props.className;
         this.favSubjects = props.favSubjects;
     }
-    // listsSubjects() {
-    //     console.log(`${}`)
-    // }
+    listsSubjects() {
+        console.log(`${this.favSubjects.join(' ')}`);
+    }
     // PRAssignment() {
     //     console.log(`${} has submitted a PR for ${}`);
     // }
@@ -63,7 +63,7 @@ const chris = new Student({
     age: 33,
     previousBackground: 'PREVIOUSBACKGROUND',
     className: 'CLASSNAME',
-    favSubjects: 'FAVSUBJECTS',
+    favSubjects: ['FAVSUBJECTS1', 'FAVSUBJECT2', 'FAVSUBJECTS']
 })
 
 
@@ -79,3 +79,4 @@ const fred = new Instructor({
 
 fred.demo('ja');
 fred.grade(chris, 'SUBJECT STRING');
+chris.listsSubjects();
