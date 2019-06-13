@@ -37,9 +37,9 @@ class Student extends Person {
     PRAssignment(subject) {
         console.log(`${this.name} has submitted a PR for ${subject}`);
     }
-    // sprintChallenge() {
-    //     console.log(`${} has begun sprint challenge on ${}`);
-    // }
+    sprintChallenge(subject) {
+        console.log(`${this.name} has begun sprint challenge on ${subject}`);
+    }
 }
 
 class ProjectManager extends Instructor {
@@ -81,3 +81,4 @@ fred.demo('ja');
 fred.grade(chris, 'SUBJECT STRING');
 chris.listsSubjects();
 chris.PRAssignment('J-IV');
+chris.sprintChallenge('J-VII');
