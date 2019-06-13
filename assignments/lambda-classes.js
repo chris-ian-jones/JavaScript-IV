@@ -167,56 +167,58 @@ const marguel = new ProjectManager({
     catchPhrase: "Practice Flex Zombies !!!"
 });
 
-// // * Method Tests * //
+// * Method Tests * //
 
-// // Person
-// isaiah.speak();
-// dan.speak();
-// mary.speak();
+// Person
+isaiah.speak();
+dan.speak();
+mary.speak();
 
-// // Instructor
-// dan.demo('User-Interface');
-// nisa.demo('UI-III-Flexbox');
-// joe.demo('Git-Flow-Practice');
+// Instructor
+dan.demo('User-Interface');
+nisa.demo('UI-III-Flexbox');
+joe.demo('Git-Flow-Practice');
 
-// dan.grade(isaiah, 'JavaScript-I');
-// nisa.grade(kevin, 'Sprint-Challenge--Advanced-CSS');
-// joe.grade(theo, 'Preprocessing-II');
+dan.grade(isaiah, 'JavaScript-I');
+nisa.grade(kevin, 'Sprint-Challenge--Advanced-CSS');
+joe.grade(theo, 'Preprocessing-II');
 
-// // Student
-// isaiah.listsSubjects();
-// kevin.listsSubjects();
-// theo.listsSubjects();
+// Student
+isaiah.listsSubjects();
+kevin.listsSubjects();
+theo.listsSubjects();
 
-// isaiah.PRAssignment('Preprocessing-I');
-// kevin.PRAssignment('portfolio-website');
-// theo.PRAssignment('responsive-web-design-I');
+isaiah.PRAssignment('Preprocessing-I');
+kevin.PRAssignment('portfolio-website');
+theo.PRAssignment('responsive-web-design-I');
 
 
-// isaiah.sprintChallenge('Sprint-Challenge--User-Interface');
-// kevin.sprintChallenge('Sprint-Challenge--Advanced-CSS');
-// theo.sprintChallenge('Sprint-Challenge--Javascript');
+isaiah.sprintChallenge('Sprint-Challenge--User-Interface');
+kevin.sprintChallenge('Sprint-Challenge--Advanced-CSS');
+theo.sprintChallenge('Sprint-Challenge--Javascript');
 
-// // Project Manager
-// mary.standup('#Web21Mary');
-// austin.standup('#Web21Austin');
-// marguel.standup('#Web21Marguel');
+// Project Manager
+mary.standup('#Web21Mary');
+austin.standup('#Web21Austin');
+marguel.standup('#Web21Marguel');
 
-// mary.debugsCode(isaiah, 'JavaScript-I');
-// austin.debugsCode(kevin, 'Sprint-Challenge--Advanced-CSS');
-// marguel.debugsCode(theo, 'Preprocessing-II');
+mary.debugsCode(isaiah, 'JavaScript-I');
+austin.debugsCode(kevin, 'Sprint-Challenge--Advanced-CSS');
+marguel.debugsCode(theo, 'Preprocessing-II');
 
-// // * Stretch Method Tests * //
+// * Stretch Method Tests * //
 
 // Instructor Test for second stretch problem
-// console.log(isaiah.grade);
-// dan.calculateNewStudentGrade(isaiah);
-// console.log(isaiah.grade);
+console.log(isaiah.grade);
+dan.calculateNewStudentGrade(isaiah);
+console.log(isaiah.grade);
 
 // Project Manager Test for second stretch problem
-// console.log(theo.grade);
-// mary.calculateNewStudentGrade(theo);
-// console.log(theo.grade);
+console.log(kevin.grade);
+mary.calculateNewStudentGrade(kevin);
+console.log(kevin.grade);
+
+// graduate method test for Student
 console.log(theo.grade);
 theo.graduate();
 mary.calculateNewStudentGrade(theo);
