@@ -51,9 +51,9 @@ class ProjectManager extends Instructor {
     standup(slackChannel) {
         console.log(`${this.name} announces to ${slackChannel}, @channel standy times!​​​​​`)
     }
-    // debugsCode() {
-    //     console.log(`${} debugs ${}'s code on ${}`)
-    // }
+    debugsCode(student, subject) {
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
+    }
 }
 
 //Test Student
@@ -76,6 +76,7 @@ const fred = new Instructor({
     catchPhrase: 'CATCHPHRASE'
 });
 
+//Test ProjectManager
 const mary = new ProjectManager({
     name: 'Mary',
     location: 'PMLOCATION',
@@ -93,4 +94,5 @@ fred.grade(chris, 'SUBJECT STRING');
 chris.listsSubjects();
 chris.PRAssignment('J-IV');
 chris.sprintChallenge('J-VII');
-mary.standup('#help')
+mary.standup('#help');
+mary.debugsCode(chris, 'J-XI');
